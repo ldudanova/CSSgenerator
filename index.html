@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="page-body">
+<div class="wrapper">
+    <header class="page-header">
+        <h1>CSS Generator</h1>
+    </header>
+    <div class="options"></div>
+    <div class="main-aria js-area">
+        <div id="radius">
+            <ul class="option-list">
+                <li class="option-list__item">
+                    <label for="top-left-input" class="option-list__label">
+                        Top left:
+                    </label>
+                    <div class="measure-unit">
+                        <input id="top-left-input" class="option-list__input" type="text" class="option-list__input" value="0">
+                        <span>px</span>
+                    </div>
+                        <input id="top-left-range" type="range" class="option-list__range" min="0" max="100" value="0">
+                </li>
+                <li class="option-list__item">
+                    <label for="top-right-input" class="option-list__label">
+                        Top right:
+                    </label>
+                    <div class="measure-unit">
+                    <input id="top-right-input" class="option-list__input" type="text" class="option-list__input" value="0">
+                        <span>px</span>
+                    </div>
+                    <input id="top-right-range" type="range" class="option-list__range" min="0" max="100" value="0">
+                </li>
+                <li class="option-list__item">
+                    <label for="bottom-left-input" class="option-list__label">
+                        Bottom left:
+                    </label>
+                    <div class="measure-unit">
+                        <input id="bottom-left-input" class="option-list__input" type="text" class="option-list__input" value="0">
+                        <span>px</span>
+                    </div>
+                    <input id="bottom-left-range" type="range" class="option-list__range" min="0" max="100" value="0">
+                </li>
+                <li class="option-list__item">
+                    <label for="bottom-right-input" class="option-list__label">
+                        Bottom right:
+                    </label>
+                    <div class="measure-unit">
+                        <input id="bottom-right-input" class="option-list__input" type="text" class="option-list__input" value="0">
+                        <span>px</span>
+                    </div>
+                    <input id="bottom-right-range" type="range" class="option-list__range" min="0" max="100" value="0">
+                </li>
+            </ul>
+        </div>
+        <div  class="code-container">
+            <pre id="border-radius-code" class="code-area">Here will be the code to copy</pre>
+            <input type="button" class="btn btn_copy js-btn-copy"  value="Copy code">
+        </div>
+    </div>
+    <div id="copy-message" class="copy-message hidden-mes">
+        <p>Code is copied!</p>
+    </div>
+</div>
+
+<script src="./js.js"></script>
+</body>
+</html>
