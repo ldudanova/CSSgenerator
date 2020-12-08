@@ -232,6 +232,15 @@
                                 <input id="opacity-color-range" type="range" class="option-list__range option-list__range_colored option-list__range_opacity" min="0" max="1" value="1" step="0.1">
                                 <input id="opacity-color" class="option-list__input option-list__input_bordered" type="text" value="1">
                             </li>
+                            <li class="option-list__item">
+                                <div class="color-picker__container">
+                                    <canvas class="color-picker" id="color-picker"></canvas>
+                                    <div class="color-picker__info">
+                                        <h4>Selected color</h4>
+                                        <div class="color-picker__selected-color js-selected-color"></div>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -284,5 +293,8 @@
 <script src="./js/boxShadow.js"></script>
 <script src="./js/textShadow.js"></script>
 <script src="./js/colorGenerator.js"></script>
+
+<script src="./js/Picker.js"></script>
+
 </body>
 </html>
