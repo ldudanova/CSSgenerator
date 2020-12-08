@@ -13,45 +13,60 @@
     <header class="page-header">
         <h1>CSS Generator</h1>
     </header>
-    <div class="options"></div>
-    <div class="main-aria js-area">
-        <div id="radius">
+    <div id="css-option-menu" class="menu">
+        <p id="js-menu-title" class="menu-title title">Chose something</p>
+    </div>
+    <div id="css-menu-option-list" class="menu-list">
+        <div class="menu-item js-chose-option" data-option-name="border-radius">Border Radius</div>
+        <div class="menu-item js-chose-option" data-option-name="box-shadow">Box Shadow</div>
+        <div class="menu-item js-chose-option" data-option-name="text-shadow">Text Shadow</div>
+        <div class="menu-item js-chose-option" data-option-name="color-generator">Color generator</div>
+        <div class="menu-item js-chose-option" data-option-name="font">Font</div>
+        <div class="menu-item js-chose-option" data-option-name="multiple-columns">Multiple columns</div>
+        <div class="menu-item js-chose-option" data-option-name="outline">Outline</div>
+        <div class="menu-item js-chose-option" data-option-name="transition">Transition</div>
+        <div class="menu-item js-chose-option" data-option-name="transform">Transform</div>
+        <div class="menu-item js-chose-option" data-option-name="flexbox">Flexbox</div>
+    </div>
+    <div id="js-area" class="main-aria">
+        <div class="main-aria-item" id="border-radius">
+            <h3 class="title title_h3">Border Radius</h3>
             <ul class="option-list">
                 <li class="option-list__item">
-                    <label for="top-left-input" class="option-list__label">
+                    <label for="top-left-input" class="option-list__label w100">
                         Top left:
                     </label>
-                    <div class="measure-unit">
-                        <input id="top-left-input" class="option-list__input" type="text" class="option-list__input" value="0">
+                    <div class="measure-unit measure-unit_px">
+                        <input id="top-left-input" class="option-list__input w100" type="text" class="option-list__input" value="0">
                         <span>px</span>
                     </div>
                         <input id="top-left-range" type="range" class="option-list__range" min="0" max="100" value="0">
                 </li>
                 <li class="option-list__item">
-                    <label for="top-right-input" class="option-list__label">
+                    <label for="top-right-input" class="option-list__label w100">
                         Top right:
                     </label>
-                    <div class="measure-unit">
-                    <input id="top-right-input" class="option-list__input" type="text" class="option-list__input" value="0">
+                    <div class="measure-unit measure-unit_px">
+                    <input id="top-right-input" class="option-list__input" type="text" value="0">
                         <span>px</span>
                     </div>
                     <input id="top-right-range" type="range" class="option-list__range" min="0" max="100" value="0">
                 </li>
                 <li class="option-list__item">
-                    <label for="bottom-left-input" class="option-list__label">
+                    <label for="bottom-left-input" class="option-list__label w100">
                         Bottom left:
                     </label>
-                    <div class="measure-unit">
+                    <div class="measure-unit measure-unit_px">
                         <input id="bottom-left-input" class="option-list__input" type="text" class="option-list__input" value="0">
                         <span>px</span>
                     </div>
                     <input id="bottom-left-range" type="range" class="option-list__range" min="0" max="100" value="0">
                 </li>
                 <li class="option-list__item">
-                    <label for="bottom-right-input" class="option-list__label">
+                    <label for="bottom-right-input" class="option-list__label w100">
                         Bottom right:
                     </label>
-                    <div class="measure-unit">
+                    <div class="measure-unit measure-unit_px">
                         <input id="bottom-right-input" class="option-list__input" type="text" class="option-list__input" value="0">
                         <span>px</span>
                     </div>
@@ -59,8 +74,197 @@
                 </li>
             </ul>
         </div>
-        <div  class="code-container">
-            <pre id="border-radius-code" class="code-area">Here will be the code to copy</pre>
+        <div class="main-aria-item" id="box-shadow">
+            <h3 class="title title_h3">Box shadow</h3>
+            <ul class="option-list">
+                <li class="option-list__item">
+                    <label for="horizontal-position" class="option-list__label">
+                        Horizontal position:
+                    </label>
+                    <div class="range">
+                        <div class="range__num js-range-num"></div>
+                    <input id="horizontal-position" type="range" class="option-list__range range__input js-range-input" min="-200" max="200" value="1">
+                    </div>
+                </li>
+                <li class="option-list__item">
+                    <label for="vertical-position" class="option-list__label">
+                        Vertical position:
+                    </label>
+                    <div class="range">
+                        <div class="range__num js-range-num"></div>
+                    <input id="vertical-position" type="range" class="option-list__range range__input js-range-input" min="-200" max="200" value="1">
+                    </div>
+                </li>
+                <li class="option-list__item">
+                    <label for="blur-radius" class="option-list__label">
+                        Blur radius:
+                    </label>
+                    <div class="range">
+                        <div class="range__num js-range-num"></div>
+                    <input id="blur-radius" type="range" class="option-list__range range__input js-range-input" min="-200" max="200" value="1">
+                    </div>
+                </li>
+                <li class="option-list__item">
+                    <label for="spread-radius" class="option-list__label">
+                        Spread radius:
+                    </label>
+                    <div class="range">
+                        <div class="range__num js-range-num"></div>
+                        <input id="spread-radius" type="range" class="option-list__range range__input js-range-input" min="-200" max="200" value="1">
+                    </div>
+                </li>
+                <li class="option-list__item">
+                    <label for="shadow-opacity" class="option-list__label">
+                        Shadow opacity:
+                    </label>
+                    <div class="range">
+                        <div class="range__num js-range-num"></div>
+                        <input id="shadow-opacity" type="range" class="option-list__range range__input js-range-input" min="0" max="1" value="0.5" step="0.01">
+                    </div>
+                </li>
+                <li class="option-list__item">
+                    <label for="box-shadow-color-display" class="option-list__label">
+                        Shadow color:
+                    </label>
+                    <div id="shadowColorPicker" class="picker">
+                        <div class="measure-unit measure-unit_color">
+                            <span>rgb </span>
+                            <input id="box-shadow-color-display" class="option-list__input option-list__input_color" type="text" value="0,0,0">
+                            <input id="box-shadow-color-picker" type="color" class="option-list__color " value="#000000">
+                        </div>
+                    </div>
+                </li>
+                <li class="option-list__item mt30 mb30">
+                    <label for="box-shadow-inset" class="option-list__label">
+                        Inset:
+                    </label>
+                    <div class="toggle">
+                    <label for="box-shadow-inset" class="toggle-label">
+                        <span class="toggle-option toggle-option_on">ON</span>
+                        <span class="toggle-option toggle-option_off">OFF</span>
+                    </label>
+                        <input id="box-shadow-inset" type="checkbox">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="main-aria-item" id="text-shadow">
+            <h3 class="title title_h3">Text shadow</h3>
+
+            <ul class="option-list">
+                <li class="option-list__item">
+                    <label for="horizontal-position-text-shadow" class="option-list__label">
+                        Horizontal position:
+                    </label>
+                    <input id="horizontal-position-text-shadow" type="range" class="option-list__range" min="-200" max="200" value="1">
+                </li>
+                <li class="option-list__item">
+                    <label for="vertical-position-text-shadow" class="option-list__label">
+                        Vertical position:
+                    </label>
+                    <input id="vertical-position-text-shadow" type="range" class="option-list__range" min="-200" max="200" value="1">
+                </li>
+                <li class="option-list__item">
+                    <label for="blur-radius-text-shadow" class="option-list__label">
+                        Blur radius:
+                    </label>
+                    <input id="blur-radius-text-shadow" type="range" class="option-list__range" min="-200" max="200" value="1">
+                </li>
+                <li class="option-list__item">
+                    <label for="text-shadow-opacity" class="option-list__label">
+                        Shadow opacity:
+                    </label>
+                    <input id="text-shadow-opacity" type="range" class="option-list__range" min="0" max="1" value="0.5" step="0.01">
+                </li>
+                <li class="option-list__item">
+                    <label for="text-shadow-color-display" class="option-list__label">
+                        Shadow color:
+                    </label>
+                    <div id="textShadowColorPicker" class="picker">
+                        <div class="measure-unit measure-unit_color">
+                            <span>rgb </span>
+                            <input id="text-shadow-color-display" class="option-list__input option-list__input_color" type="text" value="0, 0, 0">
+                            <input id="text-shadow-color-picker" type="color" class="option-list__color" value="#000000">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <p id="text-shadow-demo">
+                The quick brown fox jumps over the lazy dog.
+            </p>
+        </div>
+        <div class="main-aria-item" id="color-generator">
+            <h3 class="title title_h3">Color generator</h3>
+            <div class="color-generator">
+        <!-- First column -->
+                <div class="color-generator__panel color-panel">
+                    <div class="color-panel__heading">
+                        <h4 class="title title_h4">RGBA and Hex</h4>
+                    </div>
+                    <div class="color-panel__body">
+                        <ul class="option-list">
+                            <li class="option-list__item">
+                                <label for="red-color" class="option-list__label">
+                                    Red:
+                                </label>
+                                    <input id="red-color-range" type="range" class="option-list__range option-list__range_colored option-list__range_red" min="0" max="255" value="0">
+                                    <input id="red-color" class="option-list__input option-list__input_bordered input_red" type="text" value="0">
+                            </li>
+                            <li class="option-list__item">
+                                <label for="red-color" class="option-list__label">
+                                    Green:
+                                </label>
+                                <input id="green-color-range" type="range" class="option-list__range option-list__range_colored option-list__range_green" min="0" max="255" value="0">
+                                <input id="green-color" class="option-list__input option-list__input_bordered input_green" type="text" value="0">
+                            </li>
+                            <li class="option-list__item">
+                                <label for="blue-color" class="option-list__label">
+                                    Blue:
+                                </label>
+                                <input id="blue-color-range" type="range" class="option-list__range option-list__range_colored option-list__range_blue" min="0" max="255" value="0">
+                                <input id="blue-color" class="option-list__input option-list__input_bordered input_blue" type="text" value="0">
+                            </li>
+                            <li class="option-list__item">
+                                <label for="opacity-color" class="option-list__label">
+                                    Opacity:
+                                </label>
+                                <input id="opacity-color-range" type="range" class="option-list__range option-list__range_colored option-list__range_opacity" min="0" max="1" value="1" step="0.1">
+                                <input id="opacity-color" class="option-list__input option-list__input_bordered" type="text" value="1">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- Second column -->
+                <div class="color-generator__content">
+                    <div id="rgba-demo" class="color-generator__display mb30"></div>
+                    <div id="rgb-demo" class="color-generator__display mb30"></div>
+                </div>
+            </div>
+        <!-- Copy BTNs with code areas -->
+            <div class="color-generator__code-container">
+                <div class="color-generator__code">
+                    <div class="code-container__title">RGBA</div>
+                    <div id="rgba-code-area" class="code-container">Here will be the code to copy</div>
+                    <input type="button" id="rgba-copy-btn" class="btn btn_copy"  value="Copy RGBA"></div>
+                <div class="color-generator__code">
+                    <div class="code-container__title">RGB</div>
+                    <div id="rgb-code-area" class="code-container">Here will be the code to copy</div>
+                    <input type="button" id="rgb-copy-btn" class="btn btn_copy"  value="Copy RGB"></div>
+                <div class="color-generator__code">
+                    <div class="code-container__title">HEX</div>
+                    <div id="hex-code-area" class="code-container">Here will be the code to copy</div>
+                    <input type="button" id="hex-copy-btn" class="btn btn_copy"  value="Copy HEX"></div>
+            </div>
+        </div>
+        <div class="main-aria-item" id="font">FONT</div>
+        <div class="main-aria-item" id="multiple-columns">Multiple columns</div>
+        <div class="main-aria-item" id="outline">outline</div>
+        <div class="main-aria-item" id="transition">transition</div>
+        <div class="main-aria-item" id="transform">Transform</div>
+        <div class="main-aria-item" id="flexbox">Flexbox</div>
+        <div id="code-area" class="code-container">
+            <pre id="code" class="code-area">Here will be the code to copy</pre>
             <input type="button" class="btn btn_copy js-btn-copy"  value="Copy code">
         </div>
     </div>
@@ -69,6 +273,16 @@
     </div>
 </div>
 
-<script src="./js.js"></script>
+<!-- Common JS files -->
+<script src="./js/menu.js"></script>
+<script src="./js/showCode.js"></script>
+<script src="./js/copyCode.js"></script>
+<script src="./js/rangeSlider.js"></script>
+
+<!-- Options -->
+<script src="./js/borderRadius.js"></script>
+<script src="./js/boxShadow.js"></script>
+<script src="./js/textShadow.js"></script>
+<script src="./js/colorGenerator.js"></script>
 </body>
 </html>
